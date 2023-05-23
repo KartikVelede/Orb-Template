@@ -7,7 +7,7 @@ usage:
   workflows:
     deploy:
       jobs:
-        - khq-circleci-orb-stitch/values_update:
+        - khq-circleci-orb-stitch/values-update:
             name: Update values file
             context:
               - khq-devops
