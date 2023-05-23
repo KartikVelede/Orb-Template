@@ -15,6 +15,7 @@ workflows:
           filters: *filters
       - orb-tools/pack:
           filters: *filters
+          org_slug: gh/iFactor
       - orb-tools/review:
           exclude: RC006
           filters: *filters

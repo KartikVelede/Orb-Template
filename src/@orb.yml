@@ -8,6 +8,6 @@ display:
   source_url: "https://github.com/iFactor/khq-circleci-orb-stitch-function.git"
 
 orbs:
-  khq-app-build: kubra/khq-app-build@0
+  khq-app-build: kubra/khq-app-build@0.0.18
   tools: signavio/tools-orb@0.5.0
 
