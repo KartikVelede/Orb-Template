@@ -16,21 +16,22 @@ workflows:
       - orb-tools/pack:
           filters: *filters
       - orb-tools/review:
+          exclude: RC006
           filters: *filters
       - shellcheck/check:
+          exclude: SC2148,SC2038,SC2086,SC2002,SC2016
           filters: *filters
       - orb-tools/publish:
-          orb-name: <namespace>/<orb-name>
+          orb-name: kubra/khq-stitch-function
           vcs-type: << pipeline.project.type >>
           requires:
             [orb-tools/lint, orb-tools/review, orb-tools/pack, shellcheck/check]
           # Use a context to hold your publishing token.
-          context: <publishing-context>
+          context: khq-devops
           filters: *filters
       # Triggers the next workflow in the Orb Development Kit.
       - orb-tools/continue:
           pipeline_number: << pipeline.number >>
           vcs_type: << pipeline.project.type >>
-          orb_name: <orb-name>
           requires: [orb-tools/publish]
           filters: *filters

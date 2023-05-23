@@ -1,12 +1,15 @@
 description: >
-  This is a sample executor using Docker and Node. If you want to provide a custom environment in your orb, insert your image here.
-  If you do not require an executor, you can simply delete this directory.
+  Uses the CircleCI hosted base stable image
+
 docker:
-  - image: 'cimg/node:<<parameters.tag>>'
+  - image: cimg/base:stable
+
+resource_class: << parameters.resource-class >>
+
 parameters:
-  tag:
-    default: lts
+  resource-class:
+    default: medium
     description: >
-      Pick a specific cimg/node image variant:
-      https://hub.docker.com/r/cimg/node/tags
+      The size of the container to run the job in.
+      Refer to https://circleci.com/docs/configuration-reference/#docker-execution-environment for sizes
     type: string

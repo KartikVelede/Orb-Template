@@ -1,0 +1,7 @@
+description: >
+  Inserting the tag number and update it to the values.yml.
+  Push the change.
+steps:
+  - run:
+      name: Update tag and git push
+      command: << include(scripts/values-update.sh) >>

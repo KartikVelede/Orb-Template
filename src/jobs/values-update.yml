@@ -1,0 +1,8 @@
+description: >
+  Checks out the khq-stitch repo and updates the values file
+executor: default
+steps:
+  - checkout
+  - khq-app-build/github-setup
+  - tools/install-yq
+  - values-update

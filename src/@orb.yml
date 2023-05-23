@@ -1,15 +1,13 @@
 version: 2.1
 
 description: >
-  Sample orb description
-# What will your orb allow users to accomplish?
-# Descriptions should be short, simple, and informative.
+  Contains the necessary jobs and commands to update version tag in values.yaml in argocd stitch repo
 
-# This information will be displayed in the orb registry and is not mandatory.
 display:
-  home_url: "https://www.example.com/docs"
-  source_url: "https://github.com/<organization>/<project-name>"
+  home_url: "https://www.kubra.com"
+  source_url: "https://github.com/iFactor/khq-circleci-orb-stitch-function.git"
 
-# If your orb requires other orbs, you can import them like this. Otherwise remove the "orbs" stanza.
-# orbs:
-#  hello: circleci/hello-build@0.0.5
+orbs:
+  khq-app-build: kubra/khq-app-build@0
+  tools: signavio/tools-orb@0.5.0
+
