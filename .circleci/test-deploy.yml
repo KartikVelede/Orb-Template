@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  khq-circleci-orb-stitch: kubra/khq-circleci-orb-stitch@dev:<<pipeline.git.revision>>
+  khq-stitch-function:  kubra/khq-stitch-function@dev:<<pipeline.git.revision>>
   orb-tools: circleci/orb-tools@11.1
   tools: signavio/tools-orb@0.5.0
   khq-app-build: kubra/khq-app-build@0
