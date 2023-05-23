@@ -5,4 +5,4 @@ steps:
   - checkout
   - khq-app-build/github-setup
   - tools/install-yq
-  - values-update
+  - values_update
