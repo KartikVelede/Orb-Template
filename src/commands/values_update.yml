@@ -4,4 +4,4 @@ description: >
 steps:
   - run:
       name: Update tag and git push
-      command: << include(scripts/values-update.sh) >>
+      command: << include(scripts/values_update.sh) >>
