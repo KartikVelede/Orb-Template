@@ -24,9 +24,9 @@ workflows:
       - orb-tools/pack:
           filters: *filters
       - orb-tools/publish:
-          orb_name: kubra/khq-stitch-function
-          vcs_type: << pipeline.project.type >>
-          pub_type: production
+          orb-name: kubra/khq-stitch-function
+          vcs-type: << pipeline.project.type >>
+          pub-type: production
           requires:
             - orb-tools/pack
             - command-test
