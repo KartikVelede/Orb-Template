@@ -19,7 +19,7 @@ jobs:
 workflows:
   test-deploy:
     jobs:
-      - command-test:
+      - command-tests:
           filters: *filters
       - orb-tools/pack:
           filters: *filters
